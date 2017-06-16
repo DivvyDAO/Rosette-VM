@@ -1,0 +1,5 @@
+echo "$@" >/tmp/in
+sleep 2
+echo '<pre>'
+sed '/^rosette>$/d' /tmp/output
+>/tmp/output
