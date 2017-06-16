@@ -1,2 +1,3 @@
+.vagrant
 bin/boot-ess
 src/*.o

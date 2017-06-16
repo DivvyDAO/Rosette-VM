@@ -12,6 +12,10 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
+$script = <<SHELL
+    apt-get update
+    apt-get install -y c++ c++-multilib
+SHELL
   config.vm.box = "ubuntu/trusty64"
 
   # Disable automatic box update checking. If you disable this, then
@@ -68,4 +72,5 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision "shell", inline: $script
 end

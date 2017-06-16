@@ -116,7 +116,7 @@
 
 (define *last-expr* #niv)
 
-(define **CurrentPrompt** "rosette> ")
+(define **CurrentPrompt** "\nrosette>\n")
 
 (defProc (prompt) **CurrentPrompt**)
 
